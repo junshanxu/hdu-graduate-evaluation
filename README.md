@@ -1,12 +1,18 @@
 # 杭电研究生一键评教
 
-这是一个 Tampermonkey 用户脚本。它在杭电研究生服务平台的学生评教列表中，逐份将每道评分题填写为页面声明的上限，再提交并核对平台的待评、已评计数。
+这是一个公开发布的 Tampermonkey 用户脚本，供杭电研究生服务平台的学生评教用户安装。它会逐份将评分题填写为页面声明的上限，提交后核对平台的待评、已评计数。
+
+## 给其他用户的安装入口
+
+安装前请先确认自己需要对本学期所有待评课程给出满分评价。点击下方链接会由 Tampermonkey 打开安装确认页：
+
+[安装最新版脚本](https://raw.githubusercontent.com/junshanxu/hdu-graduate-evaluation/main/hdu-evaluation.user.js)
 
 ## 安装
 
 1. 安装 [Tampermonkey](https://www.tampermonkey.net/)。
-2. 在浏览器中打开 [`hdu-evaluation.user.js`](https://raw.githubusercontent.com/junshanxu/hdu-graduate-evaluation/main/hdu-evaluation.user.js)。
-3. Tampermonkey 显示安装页面后，选择“安装”。
+2. 点击上方“安装最新版脚本”。
+3. Tampermonkey 显示安装页后，核对脚本名称和匹配网站为 `yjsfw.hdu.edu.cn`，再选择“安装”。
 
 ## 使用
 
@@ -17,10 +23,17 @@
 
 脚本会在评分项总分不是 100、题目数量不是 17、教师列表发生变化或平台提交状态没有按预期更新时停止。
 
+## 脚本行为
+
+- 只在当前列表中的待评教师全部可见时运行，并在开始前展示教师名单供确认。
+- 每份问卷仅在 17 个评分项之和为 100 分时填写，具体分值由页面每题的评分上限决定。
+- 每次提交后检查“已评”和“待评”计数是否按预期变化。异常时停止，已完成的问卷不会重复提交。
+- 不填写“对老师的建议”文本框。
+
 ## 范围
 
 脚本只在 `yjsfw.hdu.edu.cn` 的研究生教学评估页面运行，不读取或上传登录凭据。
 
 ## 维护说明
 
-当前版本基于 2026-2027 学年第一学期的“研究生课程教学评价问卷”验证。学校页面结构或问卷规则变化后，需先人工核验再使用。
+当前版本基于 2026-2027 学年第一学期的“研究生课程教学评价问卷”验证。学校页面结构、问卷题目或评教规则变化后，需先人工核验再使用。发现兼容性问题请在 [Issues](https://github.com/junshanxu/hdu-graduate-evaluation/issues) 反馈，并附上不含个人信息的页面结构变化说明。
