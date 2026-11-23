@@ -2,17 +2,25 @@
 
 这是一个公开发布的 Tampermonkey 用户脚本，供杭电研究生服务平台的学生评教用户安装。它会逐份将评分题填写为页面声明的上限，提交后核对平台的待评、已评计数。
 
-## 给其他用户的安装入口
+## 从 GitHub 安装
 
-安装前请先确认自己需要对本学期所有待评课程给出满分评价。点击下方链接会由 Tampermonkey 打开安装确认页：
+不用下载 ZIP，也不用复制代码。按下面步骤操作即可。
+
+1. 使用 Chrome、Edge、Firefox 或 Safari 打开本页面。
+2. 如果浏览器右上角没有 Tampermonkey 图标，先访问 [Tampermonkey 官网](https://www.tampermonkey.net/)，按网页提示安装浏览器扩展。安装完成后刷新本页。
+3. 点击下面的 **安装最新版脚本**。浏览器会跳转到 Tampermonkey 的脚本安装页。
+4. 在安装页检查脚本名称为“杭电研究生一键评教”，并确认“匹配的网站”包含 `yjsfw.hdu.edu.cn`。
+5. 点击安装页右上角的 **安装**。安装完成后可以关闭该页面。
 
 [安装最新版脚本](https://raw.githubusercontent.com/junshanxu/hdu-graduate-evaluation/main/hdu-evaluation.user.js)
 
-## 安装
+### 点击安装链接后没有出现安装页
 
-1. 安装 [Tampermonkey](https://www.tampermonkey.net/)。
-2. 点击上方“安装最新版脚本”。
-3. Tampermonkey 显示安装页后，核对脚本名称和匹配网站为 `yjsfw.hdu.edu.cn`，再选择“安装”。
+1. 检查 Tampermonkey 扩展已启用。Chrome 或 Edge 在“扩展程序”中检查，Firefox 在“附加组件和主题”中检查。
+2. 回到本页，再次点击“安装最新版脚本”。
+3. 如果链接显示的是代码文本，确认浏览器地址栏中的链接以 `.user.js` 结尾，并检查 Tampermonkey 是否已安装和启用。
+
+脚本以后有新版本时，Tampermonkey 会根据 GitHub 中的更新地址提示更新。用户可在 Tampermonkey 的“已安装脚本”列表中查看、禁用或删除它。
 
 ## 使用
 
